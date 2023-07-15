@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="offer_letter_form">
+        <form>
+            <h3 class="form_title">Fill the form to generate an Offer Letter.</h3>
+            <div>
+                <label for="internid" class="lbl">Intern ID:</label>
+                <input type="text" id="txtinternid" class="inp">
+            </div>
+            <div>
+                <label for="name" class="lbl">Name:</label>
+                <input type="text" id="txtname" class="inp">    
+            </div>
+            <div>
+                <label for="domain" class="lbl">Domain:</label>
+                <input type="text" id="txtdomain" class="inp">
+            </div>
+            <div>
+                <label for="start_date" class="lbl">Start Date:</label>
+                <input type="date" id="txtsdate" class="inp">
+            </div>
+            <div>
+                <label for="end_date" class="lbl">End Date:</label>
+                <input type="date" id="txtedate" class="inp">
+            </div>
+            <div>
+                <label for="duration" class="lbl">Duration:</label>
+                <input type="text" placeholder="example: 4 Weeks" id="txtduration" class="inp">
+            </div>
+            <input type="button" value="Generate Offer Letter" onclick="generate_offer_letter()" class="btn_generate"/>
+        </form>
+    </div>
+
+    <br>
+    
+    <div class="print" id="print_letter">
+        <center><input type="button" value="Print" onclick="print_offer_letter('offer_letter')" class="btn_print"></center>
+    </div>
+    
+    <br>
+    
+    <div id="offer_letter">
+        <header>
+            <div>
+                <h3 style="color:#5f7bcd; line-height: 0px;">InternPE</h3>
+                <span style="font-size: 0.6rem; vertical-align: text-top; line-height: 0px;">Jaipur Rajasthan</span>
+            </div>
+            <img src="InternPe_logo.jpg" alt="logo" width="20%">
+        </header>
+        <div class="flexdisplay">
+            <h1>OFFER LETTER</h1>
+            <h3 style="line-height: 0px;"><b><u><label id="lblIntid"></label></u></b></h3>
+        </div>
+        <hr class="line">
+        <div class="content_container">
+            <h4 style="margin-bottom: 5%;"><b>Dear <label id="lblname"></label>,</b></h4>
+            <p class="content">We are delighted to welcome you for the internship of <b><label id="lbldomain"></label></b> internship in our company. This internship is being observed by INTERNPE, as a learning opportunity for you.</p>
+            <p class="content">Your Internhip starts on <b><label id="lblsdate"></label></b> and ends on <b><label id="lbledate"></label></b>. It's a <b><label id="lblduration"></label></b>. It's also an Unpaid program all focus is on learning.</p>
+            <p class="content">We look forward to a worthwhile and faithful association that will make you equipped for future projects. wishing you the most enjoyable and truly meaningful internship program experience.</p>
+        </div>
+        <div class="flexdisplay">
+            <div>
+                <img src="CEO_signature.PNG" alt="CEO_signature" width="40%">
+                <figcaption style="color: #5f7bcd;"><b>Co-Founder</b></figcaption>
+                <figcaption style="color: #5f7bcd;"><b>InternPE</b></figcaption>
+            </div>
+            <img src="MSME_logo.png" alt="MSME_logo" width="25%">
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
